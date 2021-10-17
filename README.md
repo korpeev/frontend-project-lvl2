@@ -5,4 +5,4 @@
 
 
 ## Gendiff example
-[![asciicast](https://asciinema.org/a/LYGjdGo3cfV8iKQj6U5JjPqKK.svg)](https://asciinema.org/a/LYGjdGo3cfV8iKQj6U5JjPqKK)
+[![asciicast](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU.svg)](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU)
