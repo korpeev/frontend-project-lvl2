@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 const readFile = (fileName) => readFileSync(path.resolve(fileName));
 
-const parseJSON = (file) => JSON.parse(file);
+const parseJSON = file => JSON.parse(file);
 
 const genDiff = (fileName1, fileName2) => {
   const file1 = parseJSON(readFile(fileName1));
