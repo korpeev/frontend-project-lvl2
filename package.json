@@ -1,0 +1,32 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "gendiff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korpeev/frontend-project-lvl2.git"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "type": "module",
+  "author": "Aslan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korpeev/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/korpeev/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1"
+  }
+}
