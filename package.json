@@ -4,7 +4,8 @@
   "description": "gendiff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest ",
+    "test:watch": "npx jest --watch"
   },
   "repository": {
     "type": "git",
@@ -21,12 +22,19 @@
   },
   "homepage": "https://github.com/korpeev/frontend-project-lvl2#readme",
   "dependencies": {
+    "@jest/globals": "^27.2.5",
     "commander": "^8.2.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "eslint": "^8.0.1"
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.2.5",
+    "eslint": "^8.0.1",
+    "jest": "^27.2.5"
   }
 }
