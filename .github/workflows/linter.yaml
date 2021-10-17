@@ -19,11 +19,10 @@ jobs:
     - name: Run Eslint
       run: make lint
 
-    steps:
     - name: Test & publish code coverage
-      uses: paambaati/codeclimate-action@v3.0.0
+      uses: paambaati/codeclimate-action@v2.7.5
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.COVERAGE_TEST_ID }}
+        CC_TEST_REPORTER_ID: ${{ secrets.COVERAGE_TEST_ID}}
       with:
         coverageCommand: make test-coverage
         debug: true
