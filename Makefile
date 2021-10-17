@@ -2,4 +2,4 @@ install:
 	npm install
 
 lint:
-	npx eslint .
+	npx eslint --fix .
