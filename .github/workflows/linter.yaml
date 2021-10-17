@@ -19,6 +19,7 @@ jobs:
     - name: Run Eslint
       run: make lint
 
+    steps:
     - name: Test & publish code coverage
       uses: paambaati/codeclimate-action@v3.0.0
       env:
