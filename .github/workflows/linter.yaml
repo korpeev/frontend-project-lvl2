@@ -19,8 +19,8 @@ jobs:
     - name: Run Eslint
       run: make lint
 
-    - name: Test and code coverages!
-      uses: paambaati/codeclimate-action@v2.2.4
+    - name: Test & publish code coverage
+      uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.COVERAGE_TEST_ID }}
       with:
