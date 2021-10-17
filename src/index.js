@@ -1,27 +1,24 @@
 import _ from 'lodash';
-import { readFileSync } from 'fs';
-import json from './parser.js';
+import format from './parser.js';
 
-const genDiff = (fileName1, fileName2) => {
-  const file1 = json(readFileSync(fileName1, 'utf-8'));
-  const file2 = json(readFileSync(fileName2, 'utf-8'));
-  const keys = _.keys({ ...file1, ...file2 });
+const nodes = (obj1, obj2) => {
+  const keys = _.keys({ ...obj1, ...obj2 });
   const sortedKeys = _.sortBy(keys);
   const lines = sortedKeys.map((key) => {
-    if (!_.has(file1, key)) {
-      return [` +  ${key}: ${file2[key]}`];
+    if (!_.has(obj1, key)) {
+      return [` +  ${key}: ${obj2[key]}`];
     }
 
-    if (file1[key] !== file2[key] && _.has(file1, key) && _.has(file2, key)) {
-      return [` -  ${key}: ${file1[key]}\n +  ${key}: ${file2[key]}`];
+    if (obj1[key] !== obj2[key] && _.has(obj2, key)) {
+      return [` -  ${key}: ${obj1[key]}\n +  ${key}: ${obj2[key]}`];
     }
 
-    if (file1[key] !== file2[key] && !_.has(file2, key)) {
-      return [` -  ${key}: ${file1[key]}`];
+    if (obj1[key] !== obj2[key] && !_.has(obj2, key)) {
+      return [` -  ${key}: ${obj1[key]}`];
     }
 
-    if (_.has(file1, key) && _.has(file2, key)) {
-      return [`    ${key}: ${file1[key]}`];
+    if (_.has(obj1, key) && _.has(obj2, key)) {
+      return [`    ${key}: ${obj1[key]}`];
     }
 
     return key;
@@ -31,6 +28,12 @@ const genDiff = (fileName1, fileName2) => {
     ...lines,
     '}',
   ].join('\n');
+};
+
+const genDiff = (fileName1, fileName2) => {
+  const file1 = format(fileName1);
+  const file2 = format(fileName2);
+  return nodes(file1, file2);
 };
 
 export default genDiff;

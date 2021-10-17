@@ -16,3 +16,10 @@ test('test flatten JSON diffs', () => {
   const file2 = getPathFixture('file2.json');
   expect(genDiff(file1, file2)).toBe(result);
 });
+
+test('test flatten Yaml diffs', () => {
+  const result = readFile('expect.txt');
+  const file1 = getPathFixture('file1.yaml');
+  const file2 = getPathFixture('file2.yaml');
+  expect(genDiff(file1, file2)).toBe(result);
+});

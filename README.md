@@ -4,5 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5adb3d685447457c8fc9/maintainability)](https://codeclimate.com/github/korpeev/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5adb3d685447457c8fc9/test_coverage)](https://codeclimate.com/github/korpeev/frontend-project-lvl2/test_coverage)
 
-## Gendiff example
+## JSON
 [![asciicast](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU.svg)](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU)
+## YAML
+[![asciicast](https://asciinema.org/a/kBjztNPOi6elrq5KxlnVamDUD.svg)](https://asciinema.org/a/kBjztNPOi6elrq5KxlnVamDUD)
