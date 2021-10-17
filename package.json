@@ -14,7 +14,7 @@
     "gendiff": "bin/gendiff.js"
   },
   "type": "module",
-  "author": "Aslan",
+  "author": "Aslan Korpeev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/korpeev/frontend-project-lvl2/issues"
