@@ -8,3 +8,6 @@
 [![asciicast](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU.svg)](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU)
 ## YAML & JSON
 [![asciicast](https://asciinema.org/a/UxPZ3mL8Ir37xoJ11DveN0u2t.svg)](https://asciinema.org/a/UxPZ3mL8Ir37xoJ11DveN0u2t)
+
+## Plain YAML & JSON 
+[![asciicast](https://asciinema.org/a/lpkuEEkB2GpJ9BV8YOl3XJec7.svg)](https://asciinema.org/a/lpkuEEkB2GpJ9BV8YOl3XJec7)
