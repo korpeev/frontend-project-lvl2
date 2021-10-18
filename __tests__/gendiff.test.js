@@ -23,3 +23,17 @@ test('test flatten Yaml diffs', () => {
   const file2 = getPathFixture('file2.yaml');
   expect(genDiff(file1, file2)).toBe(result);
 });
+
+test('test nested Yaml diffs', () => {
+  const result = readFile('expectNested.txt');
+  const nestedFile1 = getPathFixture('nestedFile1.yaml');
+  const nesteedFile2 = getPathFixture('nestedFile2.yaml');
+  expect(genDiff(nestedFile1, nesteedFile2)).toBe(result);
+});
+
+test('test nested Json diffs', () => {
+  const result = readFile('expectNested.txt');
+  const nestedFile1 = getPathFixture('nestedFile1.json');
+  const nesteedFile2 = getPathFixture('nestedFile2.json');
+  expect(genDiff(nestedFile1, nesteedFile2)).toBe(result);
+});

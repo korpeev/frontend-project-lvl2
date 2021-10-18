@@ -12,6 +12,5 @@ export default (filepath) => {
   if (ext === '.yml' || ext === '.yaml') {
     return yaml.load(file);
   }
-
-  return new Error('Format unsupported!');
+  throw new Error('Type of file unsupported');
 };
