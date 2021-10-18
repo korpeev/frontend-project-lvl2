@@ -37,3 +37,10 @@ test('test nested Json diffs', () => {
   const nesteedFile2 = getPathFixture('nestedFile2.json');
   expect(genDiff(nestedFile1, nesteedFile2)).toBe(result);
 });
+
+test('test plain Json diffs', () => {
+  const result = readFile('expectPlain.txt');
+  const plainFile1 = getPathFixture('nestedFile1.json');
+  const plainFile2 = getPathFixture('nestedFile2.json');
+  expect(genDiff(plainFile1, plainFile2, 'plain')).toBe(result);
+});
