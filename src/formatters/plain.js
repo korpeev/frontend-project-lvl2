@@ -1,30 +1,32 @@
+const getValue = (value) => {
+  if (typeof value === 'object' && value !== null) {
+    return '[complex value]';
+  } if (typeof value === 'string') {
+    return `'${value}'`;
+  } if (value === null) {
+    return null;
+  }
+  return value;
+};
+
 const plain = (data) => {
-  const iter = (tree, parent) => tree.filter((node) => node[0] !== 'equal')
+  const iter = (tree, parent) => tree.filter((node) => !node.equal)
     .map((node) => {
-      const prop = parent ? `${parent}.${node[1].key}` : `${node[1].key}`;
-      const getValue = (val) => {
-        if (typeof val === 'object' && val !== null) {
-          return '[complex value]';
-        } if (typeof val === 'string') {
-          return `'${val}'`;
-        } if (val === null) {
-          return null;
-        }
-        return val;
-      };
-      if (node[1].val === null) { return null; }
-      if (node[0] === 'add') {
-        return `Property '${prop}' was added with value: ${getValue(node[1].val)}`;
+      const status = Object.keys(node).join('');
+      const prop = parent ? `${parent}.${node[status].key}` : `${node[status].key}`;
+      if (node[status].value === null) { return null; }
+      switch (status) {
+        case 'add':
+          return `Property '${prop}' was added with value: ${getValue(node[status].value)}`;
+        case 'remove':
+          return `Property '${prop}' was removed`;
+        case 'updated':
+          return `Property '${prop}' was updated. From ${getValue(node[status].beforeValue)} to ${getValue(node[status].afterValue)}`;
+        default:
+          return `${iter(node[status].children, prop).join('\n')}`;
       }
-      if (node[0] === 'remove') {
-        return `Property '${prop}' was removed`;
-      }
-      if (node[0] === 'updated') {
-        return `Property '${prop}' was updated. From ${getValue(node[1].val1)} to ${getValue(node[1].val2)}`;
-      }
-      return `${iter(node[1].val, prop).join('\n')}`;
     });
-  return `${iter(data, 0).join('\n')}`;
+  return `${iter(data).join('\n')}`;
 };
 
 export default plain;

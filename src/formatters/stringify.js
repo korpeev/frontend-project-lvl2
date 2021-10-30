@@ -1,24 +1,23 @@
-export const currentIndent = (depth, ident = 4) => ' '.repeat(ident + depth);
+import _ from 'lodash';
+// eslint-disable-next-line import/no-cycle
+import { currentIndent } from './stylish.js';
+
+const formatValue = (current, depth, iter) => {
+  if (!_.isPlainObject(current)) {
+    return `${current}`;
+  }
+  const lines = Object
+    .entries(current)
+    .map(([key, value]) => `${currentIndent(depth)}${key}: ${iter(value, depth + 1)}`);
+  return ['{',
+    ...lines,
+    `${currentIndent(depth - 1)}}`,
+  ].join('\n');
+};
 
 const stringify = (obj, spaceCount) => {
-  const iter = (current, depth) => {
-    if (typeof current !== 'object') {
-      return `${current}`;
-    }
-    if (current === null) {
-      return null;
-    }
-
-    const lines = Object
-      .entries(current)
-      .map(([key, value]) => `${currentIndent(depth + 4)}${key}: ${iter(value, depth + 4)}`);
-
-    return ['{',
-      ...lines,
-      `${currentIndent(depth)}}`,
-    ].join('\n');
-  };
-  return iter(obj, spaceCount);
+  const iter = (current, depth) => formatValue(current, depth, iter);
+  return iter(obj, spaceCount + 1);
 };
 
 export default stringify;

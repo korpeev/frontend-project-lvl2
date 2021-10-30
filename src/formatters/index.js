@@ -3,19 +3,16 @@ import plain from './plain.js';
 import stylish from './stylish.js';
 
 const format = (tree, formatType) => {
-  if (formatType === 'stylish') {
-    return stylish(tree);
+  switch (formatType) {
+    case 'json':
+      return json(tree);
+    case 'plain':
+      return plain(tree);
+    case 'stylish':
+      return stylish(tree);
+    default:
+      throw new Error('Format unsupported!');
   }
-
-  if (formatType === 'plain') {
-    return plain(tree);
-  }
-
-  if (formatType === 'json') {
-    return json(tree);
-  }
-
-  throw new Error('Format unsupported!');
 };
 
 export default format;
