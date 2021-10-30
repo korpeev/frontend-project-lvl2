@@ -17,7 +17,7 @@ const formatValue = (current, depth, iter) => {
 
 const stringify = (obj, spaceCount) => {
   const iter = (current, depth) => formatValue(current, depth, iter);
-  return iter(obj, spaceCount + 1);
+  return iter(obj, spaceCount);
 };
 
 export default stringify;

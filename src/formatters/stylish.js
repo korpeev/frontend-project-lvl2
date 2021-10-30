@@ -7,13 +7,13 @@ const stylish = (data) => {
     const status = Object.keys(node).join('');
     switch (status) {
       case 'add':
-        return `${currentIndent(depth, 2)}+ ${node[status].key}: ${stringify(node[status].value, depth)}\n`;
+        return `${currentIndent(depth, 2)}+ ${node[status].key}: ${stringify(node[status].value, depth + 1)}\n`;
       case 'remove':
-        return `${currentIndent(depth, 2)}- ${node[status].key}: ${stringify(node[status].value, depth)}\n`;
+        return `${currentIndent(depth, 2)}- ${node[status].key}: ${stringify(node[status].value, depth + 1)}\n`;
       case 'equal':
-        return `${currentIndent(depth, 2)}  ${node[status].key}: ${stringify(node[status].value, depth)}\n`;
+        return `${currentIndent(depth, 2)}  ${node[status].key}: ${stringify(node[status].value, depth + 1)}\n`;
       case 'updated':
-        return `${currentIndent(depth, 2)}- ${node[status].key}: ${stringify(node[status].beforeValue, depth)}\n${currentIndent(depth, 2)}+ ${node[status].key}: ${stringify(node[status].afterValue, depth)}\n`;
+        return `${currentIndent(depth, 2)}- ${node[status].key}: ${stringify(node[status].beforeValue, depth + 1)}\n${currentIndent(depth, 2)}+ ${node[status].key}: ${stringify(node[status].afterValue, depth + 1)}\n`;
       default:
         return `${currentIndent(depth)}${node[status].key}: {\n${iter(node[status].children, depth + 1).join('')}${currentIndent(depth)}}\n`;
     }
