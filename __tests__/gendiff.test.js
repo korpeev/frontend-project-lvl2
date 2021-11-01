@@ -10,21 +10,21 @@ const __dirname = dirname(__filename);
 const getPathFixture = (fileName) => path.join(__dirname, '..', '__fixtures__', fileName);
 const readFile = (fileName) => fs.readFileSync(getPathFixture(fileName), 'utf-8');
 
-test('test flatten JSON diffs', () => {
+test('foramt type flatten json diffs', () => {
   const result = readFile('expect.txt');
   const file1 = getPathFixture('file1.json');
   const file2 = getPathFixture('file2.json');
   expect(genDiff(file1, file2)).toBe(result);
 });
 
-test('test flatten Yaml diffs', () => {
+test('format type flatten yaml diffs', () => {
   const result = readFile('expect.txt');
   const file1 = getPathFixture('file1.yaml');
   const file2 = getPathFixture('file2.yaml');
   expect(genDiff(file1, file2)).toBe(result);
 });
 
-test('test nested Yaml diffs', () => {
+test('format type nested yaml diffs', () => {
   const result = readFile('expectNested.txt');
   const nestedFile1 = getPathFixture('nestedFile1.yaml');
   const nesteedFile2 = getPathFixture('nestedFile2.yaml');
