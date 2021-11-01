@@ -31,35 +31,35 @@ test('test nested Yaml diffs', () => {
   expect(genDiff(nestedFile1, nesteedFile2)).toBe(result);
 });
 
-test('test nested Json diffs', () => {
+test('format type nested json diffs', () => {
   const result = readFile('expectNested.txt');
   const nestedFile1 = getPathFixture('nestedFile1.json');
   const nesteedFile2 = getPathFixture('nestedFile2.json');
   expect(genDiff(nestedFile1, nesteedFile2)).toBe(result);
 });
 
-test('test plain Json diffs', () => {
+test('format type plain json diffs', () => {
   const result = readFile('expectPlain.txt');
   const plainFile1 = getPathFixture('nestedFile1.json');
   const plainFile2 = getPathFixture('nestedFile2.json');
   expect(genDiff(plainFile1, plainFile2, 'plain')).toBe(result);
 });
 
-test('test plain Yaml diffs', () => {
+test('format type plain yaml diffs', () => {
   const result = readFile('expectPlain.txt');
   const plainFile1 = getPathFixture('nestedFile1.yaml');
   const plainFile2 = getPathFixture('nestedFile2.yaml');
   expect(genDiff(plainFile1, plainFile2, 'plain')).toBe(result);
 });
 
-test('test JSON Json diffs', () => {
+test('format type JSON json diffs', () => {
   const result = readFile('expectJson.txt');
   const file1 = getPathFixture('nestedFile1.json');
   const file2 = getPathFixture('nestedFile2.json');
   expect(genDiff(file1, file2, 'json')).toBe(result);
 });
 
-test('test JSON Yaml diffs', () => {
+test('format type JSON Yaml diffs', () => {
   const result = readFile('expectJson.txt');
   const file1 = getPathFixture('nestedFile1.yaml');
   const file2 = getPathFixture('nestedFile2.yaml');
