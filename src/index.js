@@ -33,7 +33,6 @@ const genDiff = (fileName1, fileName2, formatType = 'stylish') => {
   const file1 = parser(getContent(fileName1), getFormat(fileName1));
   const file2 = parser(getContent(fileName2), getFormat(fileName2));
   const tree = nodes(file1, file2);
-  console.log(tree)
   return format(tree, formatType);
 };
 
