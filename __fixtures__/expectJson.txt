@@ -4,7 +4,7 @@
     "key": "common",
     "children": [
       {
-        "status": "add",
+        "status": "added",
         "key": "follow",
         "value": false
       },
@@ -14,7 +14,7 @@
         "value": "Value 1"
       },
       {
-        "status": "remove",
+        "status": "removed",
         "key": "setting2",
         "value": 200
       },
@@ -25,12 +25,12 @@
         "afterValue": null
       },
       {
-        "status": "add",
+        "status": "added",
         "key": "setting4",
         "value": "blah blah"
       },
       {
-        "status": "add",
+        "status": "added",
         "key": "setting5",
         "value": {
           "key5": "value5"
@@ -58,7 +58,7 @@
             "value": "value"
           },
           {
-            "status": "add",
+            "status": "added",
             "key": "ops",
             "value": "vops"
           }
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "status": "remove",
+    "status": "removed",
     "key": "group2",
     "value": {
       "abc": 12345,
@@ -102,7 +102,7 @@
     }
   },
   {
-    "status": "add",
+    "status": "added",
     "key": "group3",
     "value": {
       "deep": {
