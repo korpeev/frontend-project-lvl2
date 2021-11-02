@@ -1,134 +1,116 @@
 [
   {
-    "recursive": {
-      "key": "common",
-      "children": [
-        {
-          "add": {
-            "key": "follow",
-            "value": false
-          }
-        },
-        {
-          "equal": {
-            "key": "setting1",
-            "value": "Value 1"
-          }
-        },
-        {
-          "remove": {
-            "key": "setting2",
-            "value": 200
-          }
-        },
-        {
-          "updated": {
-            "key": "setting3",
-            "beforeValue": true,
-            "afterValue": null
-          }
-        },
-        {
-          "add": {
-            "key": "setting4",
-            "value": "blah blah"
-          }
-        },
-        {
-          "add": {
-            "key": "setting5",
-            "value": {
-              "key5": "value5"
-            }
-          }
-        },
-        {
-          "recursive": {
-            "key": "setting6",
+    "status": "recursive",
+    "key": "common",
+    "children": [
+      {
+        "status": "add",
+        "key": "follow",
+        "value": false
+      },
+      {
+        "status": "equal",
+        "key": "setting1",
+        "value": "Value 1"
+      },
+      {
+        "status": "remove",
+        "key": "setting2",
+        "value": 200
+      },
+      {
+        "status": "updated",
+        "key": "setting3",
+        "beforeValue": true,
+        "afterValue": null
+      },
+      {
+        "status": "add",
+        "key": "setting4",
+        "value": "blah blah"
+      },
+      {
+        "status": "add",
+        "key": "setting5",
+        "value": {
+          "key5": "value5"
+        }
+      },
+      {
+        "status": "recursive",
+        "key": "setting6",
+        "children": [
+          {
+            "status": "recursive",
+            "key": "doge",
             "children": [
               {
-                "recursive": {
-                  "key": "doge",
-                  "children": [
-                    {
-                      "updated": {
-                        "key": "wow",
-                        "beforeValue": "",
-                        "afterValue": "so much"
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "equal": {
-                  "key": "key",
-                  "value": "value"
-                }
-              },
-              {
-                "add": {
-                  "key": "ops",
-                  "value": "vops"
-                }
+                "status": "updated",
+                "key": "wow",
+                "beforeValue": "",
+                "afterValue": "so much"
               }
             ]
+          },
+          {
+            "status": "equal",
+            "key": "key",
+            "value": "value"
+          },
+          {
+            "status": "add",
+            "key": "ops",
+            "value": "vops"
           }
-        }
-      ]
-    }
+        ]
+      }
+    ]
   },
   {
-    "recursive": {
-      "key": "group1",
-      "children": [
-        {
-          "updated": {
-            "key": "baz",
-            "beforeValue": "bas",
-            "afterValue": "bars"
-          }
+    "status": "recursive",
+    "key": "group1",
+    "children": [
+      {
+        "status": "updated",
+        "key": "baz",
+        "beforeValue": "bas",
+        "afterValue": "bars"
+      },
+      {
+        "status": "equal",
+        "key": "foo",
+        "value": "bar"
+      },
+      {
+        "status": "updated",
+        "key": "nest",
+        "beforeValue": {
+          "key": "value"
         },
-        {
-          "equal": {
-            "key": "foo",
-            "value": "bar"
-          }
-        },
-        {
-          "updated": {
-            "key": "nest",
-            "beforeValue": {
-              "key": "value"
-            },
-            "afterValue": "str"
-          }
-        }
-      ]
-    }
+        "afterValue": "str"
+      }
+    ]
   },
   {
-    "remove": {
-      "key": "group2",
-      "value": {
-        "abc": 12345,
-        "deep": {
-          "id": 45
-        }
+    "status": "remove",
+    "key": "group2",
+    "value": {
+      "abc": 12345,
+      "deep": {
+        "id": 45
       }
     }
   },
   {
-    "add": {
-      "key": "group3",
-      "value": {
-        "deep": {
-          "id": {
-            "number": 45
-          }
-        },
-        "fee": 100500
-      }
+    "status": "add",
+    "key": "group3",
+    "value": {
+      "deep": {
+        "id": {
+          "number": 45
+        }
+      },
+      "fee": 100500
     }
   }
 ]

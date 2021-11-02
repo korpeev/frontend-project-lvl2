@@ -11,7 +11,7 @@ const format = (tree, formatType) => {
     case 'stylish':
       return stylish(tree);
     default:
-      throw new Error('Format unsupported!');
+      throw new Error(`Format unsupported ${formatType}`);
   }
 };
 
