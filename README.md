@@ -4,18 +4,22 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5adb3d685447457c8fc9/maintainability)](https://codeclimate.com/github/korpeev/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5adb3d685447457c8fc9/test_coverage)](https://codeclimate.com/github/korpeev/frontend-project-lvl2/test_coverage)
 
-### Install:
-1. Cклонируйте репозиторию к себе. 
-2. Установка программы: `npm install` и `npm link` 
-3. Команды программы: `-h --help -f --format` 
-
-## Gendiff 
+### :wrench: Install
+ 1.  Склонируйте репозиторию к себе!\
+ 2.  Установите программу с командай: `npm install` и `npm link`.\
+ 3.  Команды программы: `-f format, -h help`.\
+ 4.  Стили форматирования: `plain, json, stylish`.
+#### Пример запуска программы:
+```
+gendiff file1.json file2.json
+```
+## STYLISH
 [![asciicast](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU.svg)](https://asciinema.org/a/CdKEpxtg7edFmWl4PfZqnPFqU)
 ## YAML & JSON
 [![asciicast](https://asciinema.org/a/UxPZ3mL8Ir37xoJ11DveN0u2t.svg)](https://asciinema.org/a/UxPZ3mL8Ir37xoJ11DveN0u2t)
 
-## Plain YAML & JSON 
+## PLAIN 
 [![asciicast](https://asciinema.org/a/lpkuEEkB2GpJ9BV8YOl3XJec7.svg)](https://asciinema.org/a/lpkuEEkB2GpJ9BV8YOl3XJec7)
 
-## Nested JSOn
+## JSON
 [![asciicast](https://asciinema.org/a/M3r35jLhHeWr7OM2L8Gt1nLxa.svg)](https://asciinema.org/a/M3r35jLhHeWr7OM2L8Gt1nLxa)
