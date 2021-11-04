@@ -22,9 +22,7 @@ const stringify = (obj, spaceCount) => {
 
 const stylish = (data) => {
   const iter = (tree, depth) => tree.map((node) => {
-    const {
-      status, key,
-    } = node;
+    const { status, key } = node;
     switch (status) {
       case 'added': {
         const { value } = node;

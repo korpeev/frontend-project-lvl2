@@ -12,9 +12,7 @@ const getValue = (value) => {
 const plain = (data) => {
   const iter = (tree, parent) => tree.filter((node) => node.status !== 'equal')
     .map((node) => {
-      const {
-        status, key,
-      } = node;
+      const { status, key } = node;
       const prop = parent ? parent.concat('.', key) : key;
       switch (status) {
         case 'added': {
