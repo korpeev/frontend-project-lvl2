@@ -5,7 +5,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5adb3d685447457c8fc9/test_coverage)](https://codeclimate.com/github/korpeev/frontend-project-lvl2/test_coverage)
 
 ### :wrench: Install
- 1.  Склонируйте репозиторию к себе с командой `git clone`.
+ 1.  Склонировать репозиторию с командой: `git clone`.
  2.  Установите программу с командай: `npm install` и `npm link`.
  3.  Команды программы: `-f format, -h help`.
  4.  Стили форматирования: `plain, json, stylish`.
