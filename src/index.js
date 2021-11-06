@@ -5,7 +5,9 @@ import parser from './parser.js';
 import format from './formatters/index.js';
 
 const nodes = (obj1, obj2) => {
-  const keys = Object.keys({ ...obj1, ...obj2 });
+  const key1 = _.keys(obj1);
+  const key2 = _.keys(obj2);
+  const keys = _.union(key1, key2);
   const sortedKeys = _.sortBy(keys);
   return sortedKeys.map((key) => {
     if (!_.has(obj1, key)) {

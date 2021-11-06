@@ -1,12 +1,15 @@
 const getValue = (value) => {
-  if (typeof value === 'object' && value !== null) {
-    return '[complex value]';
-  } if (typeof value === 'string') {
-    return `'${value}'`;
-  } if (value === null) {
+  if (value === null) {
     return null;
   }
-  return value;
+  switch (typeof value) {
+    case 'object':
+      return '[complex value]';
+    case 'string':
+      return `'${value}'`;
+    default:
+      return value;
+  }
 };
 
 const plain = (data) => {
